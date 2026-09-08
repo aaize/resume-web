@@ -1,40 +1,35 @@
-# Resume Web — offline + GitHub Pages ready
+# Resume Builder — offline + GitHub Pages ready
 
-Plain HTML/CSS/JS. No build, no CDN, no backend. Double-click to run offline.
+Plain HTML/CSS/JS. No build, no CDN, no server. Your data never leaves the device.
 
 ## Run offline
-1. Open `index.html` directly in a browser, **or**
-2. `python3 -m http.server 8000` then visit http://localhost:8000
+- Double-click `index.html`, **or**
+- `python3 -m http.server 8000` → http://localhost:8000
 
-All paths are relative (`./css/...`, `./js/...`), fonts are system fonts.
+## Use
+1. Fill form on the left, live preview on the right
+2. Switch Template: Modern / Minimal / Classic-ATS
+3. Autosaves to `localStorage`. Use **Export JSON** to back up, **Import** to restore
+4. **Print / PDF** → Save as PDF. Only the resume prints; Classic template is most ATS-friendly
 
-## Edit content
-- `index.html` — name, hero, about, experience, skills, education, contact
-- `js/data.js` — projects + blog posts (placeholder data included)
-- `css/style.css` — colors via `:root` vars
-- `assets/Alex-Carter-Resume.txt` — plain-text resume download
-
-## Print to PDF
-Click **Print / PDF** → Destination: Save as PDF. Print CSS hides nav/buttons and formats a clean 1–2 page resume.
+## Edit / extend
+- `index.html` — form fields + toolbar
+- `js/sample.js` — sample + blank data
+- `js/templates.js` — `modern/minimal/classic` renderers (pure functions)
+- `js/app.js` — state, bindings, import/export
+- `css/style.css` — `:root` accent, `@media print` rules
 
 ## Deploy to GitHub Pages
-1. `git init && git add -A && git commit -m "resume site"`
-2. Create repo on GitHub, e.g. `resume-web`
-3. `git remote add origin git@github.com:<you>/resume-web.git && git push -u origin main`
-4. Repo → Settings → Pages → Source: **GitHub Actions**
-5. Push to `main` triggers `.github/workflows/deploy.yml` → live URL
+1. `git init && git add -A && git commit -m "resume builder"`
+2. Push to GitHub `main`
+3. Settings → Pages → Source: **GitHub Actions**
+4. Push triggers `.github/workflows/deploy.yml`
 
-Files included for Pages: `.nojekyll`, `404.html`, relative asset paths.
-
-## Structure
 ```
 index.html
 css/style.css
-js/data.js
-js/main.js
+js/sample.js, js/templates.js, js/app.js
 assets/favicon.svg
-assets/Alex-Carter-Resume.txt
-404.html
-.nojekyll
+404.html, .nojekyll
 .github/workflows/deploy.yml
 ```
