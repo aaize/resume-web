@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Alex Carter — Full-Stack Developer</title>
+  <meta name="description" content="Portfolio and resume of Alex Carter, Full-Stack Developer. Works 100% offline. Deployable to GitHub Pages." />
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="#home" aria-label="Home">
+        <span class="brand-mark" aria-hidden="true">AC</span>
+        <span class="brand-text">Alex Carter</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+        <ul id="navMenu" class="nav-menu">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li class="nav-cta"><button id="printBtn" class="btn btn-small" type="button">Print / PDF</button></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section id="home" class="hero container">
+      <div class="hero-text">
+        <p class="eyebrow">Hello, I'm</p>
+        <h1>Alex Carter</h1>
+        <p class="role">Full-Stack Developer — TypeScript / Node / React</p>
+        <p class="summary">
+          I build fast, accessible, offline-friendly web apps. 5+ years shipping
+          products from MVP to scale. Currently open to new opportunities.
+        </p>
+        <div class="hero-actions no-print">
+          <button class="btn" onclick="window.print()" type="button">Download Resume (PDF)</button>
+          <a class="btn btn-ghost" href="#projects">View Work</a>
+        </div>
+        <ul class="contact-inline">
+          <li><a href="mailto:alex.carter@example.com">alex.carter@example.com</a></li>
+          <li><a href="tel:+15551234567">+1 (555) 123-4567</a></li>
+          <li><span>San Francisco, CA</span></li>
+        </ul>
+        <ul class="social-inline no-print">
+          <li><a href="https://github.com/" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="https://linkedin.com/" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://x.com/" target="_blank" rel="noopener">X / Twitter</a></li>
+          <li><a href="./assets/Alex-Carter-Resume.txt" download>resume.txt</a></li>
+        </ul>
+        <p class="offline-badge no-print" id="offlineBadge" role="status" hidden>You are offline — this site fully works offline.</p>
+      </div>
+      <div class="hero-card" aria-label="Quick facts">
+        <div class="avatar" aria-hidden="true">AC</div>
+        <dl>
+          <div><dt>Experience</dt><dd>5+ years</dd></div>
+          <div><dt>Focus</dt><dd>Web Apps, APIs, DX</dd></div>
+          <div><dt>Availability</dt><dd><span class="dot"></span> Open to work</dd></div>
+          <div><dt>Location</dt><dd>Remote / SF Bay</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section container">
+      <h2>About</h2>
+      <div class="two-col">
+        <p>
+          I'm a product-minded developer who likes simple, maintainable systems.
+          I work mostly with TypeScript, Node.js, and React, with Postgres and Docker
+          for the backend. I care about performance, accessibility, and good docs.
+        </p>
+        <ul class="checklist">
+          <li>Offline-first static site — no build step, no CDN</li>
+          <li>Semantic HTML, responsive, keyboard accessible</li>
+          <li>Print stylesheet for clean 1-2 page PDF export</li>
+          <li>Edit content directly in <code>index.html</code> + <code>js/data.js</code></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section container">
+      <h2>Experience</h2>
+      <ol class="timeline">
+        <li>
+          <div class="timeline-head">
+            <h3>Senior Full-Stack Developer — Acme Corp</h3>
+            <span class="date">2022 — Present</span>
+          </div>
+          <p class="meta">TypeScript · React · Node.js · Postgres · AWS</p>
+          <ul>
+            <li>Led migration of legacy dashboard to React, cutting load time 62%.</li>
+            <li>Built offline-capable PWA used by 20k+ field workers.</li>
+            <li>Mentored 4 engineers, introduced PR templates and e2e tests.</li>
+          </ul>
+        </li>
+        <li>
+          <div class="timeline-head">
+            <h3>Frontend Developer — Beta Labs</h3>
+            <span class="date">2020 — 2022</span>
+          </div>
+          <p class="meta">JavaScript · Vue · Firebase</p>
+          <ul>
+            <li>Shipped customer portal serving 50k MAU with 99.9% uptime.</li>
+            <li>Implemented design system used across 3 products.</li>
+          </ul>
+        </li>
+        <li>
+          <div class="timeline-head">
+            <h3>Web Developer — Freelance</h3>
+            <span class="date">2018 — 2020</span>
+          </div>
+          <p class="meta">HTML · CSS · WordPress · Shopify</p>
+          <ul>
+            <li>Delivered 30+ static sites and small e-commerce stores.</li>
+          </ul>
+        </li>
+      </ol>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section container">
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <div>
+          <h3>Frontend</h3>
+          <ul class="tags">
+            <li>TypeScript</li><li>React</li><li>HTML5</li><li>CSS3</li>
+            <li>Vite</li><li>Accessibility</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Backend</h3>
+          <ul class="tags">
+            <li>Node.js</li><li>Express</li><li>PostgreSQL</li>
+            <li>REST</li><li>Docker</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Tools</h3>
+          <ul class="tags">
+            <li>Git / GitHub</li><li>GitHub Actions</li><li>Linux</li>
+            <li>Figma</li><li>Playwright</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education" class="section container">
+      <h2>Education</h2>
+      <ul class="plain-list">
+        <li><strong>B.S. Computer Science</strong> — State University, 2014–2018</li>
+        <li><strong>AWS Certified Developer Associate</strong> — 2023</li>
+      </ul>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section container">
+      <div class="section-head">
+        <h2>Projects</h2>
+        <div class="filters no-print" role="group" aria-label="Filter projects">
+          <button class="filter-btn active" data-filter="all" type="button">All</button>
+          <button class="filter-btn" data-filter="web" type="button">Web</button>
+          <button class="filter-btn" data-filter="tool" type="button">Tools</button>
+          <button class="filter-btn" data-filter="oss" type="button">Open Source</button>
+        </div>
+      </div>
+      <div id="projectGrid" class="card-grid"><!-- rendered by js/data.js + js/main.js --></div>
+      <noscript><p>Enable JavaScript to see projects, or edit <code>js/data.js</code>.</p></noscript>
+    </section>
+
+    <!-- BLOG -->
+    <section id="blog" class="section container">
+      <div class="section-head">
+        <h2>Blog / Notes</h2>
+        <a class="no-print" href="#blog" id="rssLink">Local-only — no RSS needed offline</a>
+      </div>
+      <p class="muted">Short notes. Stored locally in <code>js/data.js</code> so the site stays fully offline. Add a post by editing that file.</p>
+      <div id="postList" class="post-list"><!-- rendered by JS --></div>
+      <noscript><p>Blog posts require JavaScript, or read them directly in <code>js/data.js</code>.</p></noscript>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section container">
+      <h2>Contact</h2>
+      <div class="two-col">
+        <div>
+          <p>Best way to reach me is email. I usually reply within 24h.</p>
+          <ul class="plain-list">
+            <li>Email: <a href="mailto:alex.carter@example.com">alex.carter@example.com</a></li>
+            <li>Phone: <a href="tel:+15551234567">+1 (555) 123-4567</a></li>
+            <li>Location: San Francisco, CA — remote friendly</li>
+          </ul>
+        </div>
+        <form id="contactForm" class="contact-form no-print" novalidate>
+          <label>Name<input name="name" required autocomplete="name" /></label>
+          <label>Email<input name="email" type="email" required autocomplete="email" /></label>
+          <label>Message<textarea name="message" rows="4" required></textarea></label>
+          <button class="btn" type="submit">Save Locally + Open Email</button>
+          <p class="muted small" id="formStatus" role="status">Offline form: saves to your browser and opens your mail app. Nothing is uploaded.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer no-print">
+    <div class="container footer-inner">
+      <p>© <span id="year">2026</span> Alex Carter. Built with plain HTML/CSS/JS. Works offline.</p>
+      <p><a href="#top">Back to top ↑</a></p>
+    </div>
+  </footer>
+
+  <script src="./js/data.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+</html>
